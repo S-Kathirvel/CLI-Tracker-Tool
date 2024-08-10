@@ -1,12 +1,19 @@
-import pygetwindow as gw
 import time
 import threading
+import pygetwindow as gw
+import os
 
-def write_log(active_window,window_time,total_time):
-    with open('log.txt', 'a') as f:
+# Define the global variable to control the service
+running = False
+LOG_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.txt')
+def write_log(active_window, window_time, total_time):
+    # data = f"{active_window} time: {window_time} seconds\n Time spent on '{active_window.split(' - ')[0]}': {window_time:.2f} seconds\n Total time: {total_time} seconds\n\n"
+    # print(data)
+    with open(LOG_FILE_PATH, 'a') as f:
         f.write(f'{active_window} time: {window_time} seconds\n')
-        f.write(f"Time spent on '{active_window.split(' - ')[0]}': {window_time:.2f} seconds")
-        f.write(f'Total time: {total_time} seconds\n')
+        f.write(f"Time spent on '{active_window.split(' - ')[0]}': {window_time:.2f} seconds\n")
+        f.write(f'Total time: {total_time} seconds\n\n')
+        f.flush()
 
 def track_time():
     active_window = None
@@ -28,11 +35,9 @@ def track_time():
                         # Calculate time spent in the previous window
                         elapsed_time = time.time() - start_time
                         total_time += elapsed_time
-                        write_log(active_window,url_time,total_time)
+                        write_log(active_window, url_time, total_time)
                         if " - Brave" in active_window:
                             url_time += elapsed_time
-                            # print(f"Time spent on '{active_window.split(' - ')[0]}': {elapsed_time:.2f} seconds")
-
 
                     # Update to the new window
                     active_window = current_title
@@ -40,43 +45,33 @@ def track_time():
 
             time.sleep(1)  # Check every second
 
-    except KeyboardInterrupt:
-        print("Timer stopped")
+    except Exception as e:
+        print(f"Error: {e}")
+        stop_tracking()  # Ensure the service stops cleanly
+
+    finally:
         if active_window and start_time:
             # Calculate final time for the last active window
             elapsed_time = time.time() - start_time
             total_time += elapsed_time
-            print(f"Final time spent on '{active_window}': {elapsed_time:.2f} seconds")
-            if " - Google Chrome" in active_window:
-                url_time += elapsed_time
-                print(f"Final time spent on '{active_window.split(' - ')[0]}': {elapsed_time:.2f} seconds")
-
-        write_log(active_window,elapsed_time,total_time)
-        # print(f"Total time spent in active window: {total_time:.2f} seconds")
-        # print(f"Total time spent in browser windows: {url_time:.2f} seconds")
-
+            write_log(active_window, elapsed_time, total_time)
 
 def start_tracking():
     global running
     running = True
     tracker_thread = threading.Thread(target=track_time)
-    tracker_thread.daemon = True
+    tracker_thread.daemon = True  # Allow the thread to exit when the main program exits
     tracker_thread.start()
-
 
 def stop_tracking():
     global running
     running = False
 
-
+# Ensure the service runs continuously in the background
 if __name__ == "__main__":
-    print("Press Enter to start the timer and Ctrl+C to stop it.")
-    input()
     start_tracking()
-    
-    try:
-        while True:
-            time.sleep(1)  # Keep the script running
 
-    except KeyboardInterrupt:
-        stop_tracking()
+    while running:
+        time.sleep(1)  # Keep the script running while the service is active
+
+    # When `running` is set to False, the loop will break and the script will exit

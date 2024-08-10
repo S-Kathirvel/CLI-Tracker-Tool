@@ -1,0 +1,24 @@
+manager.py - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
+Time spent on 'manager.py': 0.00 seconds
+Total time: 6.031229257583618 seconds
+
+requirements.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
+Time spent on 'requirements.txt': 0.00 seconds
+Total time: 8.03763198852539 seconds
+
+manager.py - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
+Time spent on 'manager.py': 0.00 seconds
+Total time: 12.050506114959717 seconds
+
+log.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
+Time spent on 'log.txt': 0.00 seconds
+Total time: 22.11208963394165 seconds
+
+requirements.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
+Time spent on 'requirements.txt': 0.00 seconds
+Total time: 32.15813207626343 seconds
+
+ChatGPT - Brave time: 0 seconds
+Time spent on 'ChatGPT': 0.00 seconds
+Total time: 37.1826376914978 seconds
+
