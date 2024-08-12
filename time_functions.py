@@ -35,7 +35,7 @@ def write_start_time_to_log(start_time, log_file):
     """Write the start time to the log file."""
     device_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     with open(log_file, "a") as f:
-        f.write(f"Start: {device_time})\n")  # (Epoch: {start_time})\n")
+        f.write(f"Start: {device_time})   (Epoch: {start_time})\n")
 
 # Write the stop time and elapsed time to the log file
 def write_stop_time_to_log(start_time, stop_time, log_file):
