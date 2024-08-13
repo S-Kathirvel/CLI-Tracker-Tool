@@ -1,6 +1,7 @@
 import sys
 import time
 import os
+import json
 # import multiprocessing
 from pid import PidFile, PidFileError
 import subprocess
@@ -13,6 +14,20 @@ def main():
             f.write("Service is running...\n")
         time.sleep(10)
 
+
+base_format = json.loads(open('item_format.json').read())
+def initialize_record(session_name,PID,mode,start_time):
+    with open('storage-format.json','r') as fh:
+        data = json.load(fh)
+        base_format['mode'] = mode
+        base_format['PID'] = PID
+        base_format['start-time'] = start_time
+        data[session_name] = base_format
+        fh.flush()
+    with open('storage-format.json','w') as fh:
+        json.dump(data,fh)
+        fh.flush()
+
 def start_service():
     try:
         with PidFile(pidname=PID_FILE):
@@ -20,6 +35,7 @@ def start_service():
             # process.start()
             with open(PID_FILE, "w") as f:
                 f.write(str(process.pid))
+            initialize_record("session-1",str(process.pid),'stopwatch',time.time())
             print(f"Service started with PID {process.pid}. Running in the background.")
     except PidFileError:
         print("Service is already running.")

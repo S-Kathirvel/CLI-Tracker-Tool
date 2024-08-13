@@ -1,0 +1,42 @@
+{
+    "Session-1-name": {
+        "mode": "timer",
+        "PID": "process ID as str or int",
+        "Total-time": "time in seconds as int",
+        "Start-time": "Starting time of the session",
+        "application_time": {
+            "app1": "time in seconds as int",
+            "app2": "time in seconds as int"
+        },
+        "Idle time": "Idle time in seconds",
+        "epoch": "optional data to be entered"
+    },
+    "Session-2-name": {
+        "mode": "timer",
+        "PID": "process ID as str or int",
+        "Total-time": "time in seconds as int",
+        "Start-time": "Starting time of the session",
+        "application_time": {
+            "app1": "time in seconds as int",
+            "app2": "time in seconds as int"
+        },
+        "Idle time": "Idle time in seconds",
+        "epoch": "optional data to be entered"
+    },
+    "Session-3-name": {
+        "mode": "stopwatch",
+        "PID": "process ID as str or int",
+        "Set-time": "Set time in seconds as int",
+        "Start-time": "Starting time of the session",
+        "application_time": {
+            "app1": "time in seconds as int",
+            "app2": "time in seconds as int"
+        },
+        "elapsed-time": "elapsed time in seconds as int",
+        "allow-list-for-focus ": [
+            "app1",
+            "app2",
+            "app3"
+        ]
+    }
+}

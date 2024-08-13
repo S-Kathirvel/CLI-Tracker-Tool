@@ -1,24 +1,42 @@
-manager.py - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
-Time spent on 'manager.py': 0.00 seconds
-Total time: 6.031229257583618 seconds
+log.txt - CLI-Tracker-Tool - Visual Studio Code time: 27.329267501831055 seconds
+Time spent on 'log.txt': 27.33 seconds
+Total time: 27.329267501831055 seconds
 
-requirements.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
-Time spent on 'requirements.txt': 0.00 seconds
-Total time: 8.03763198852539 seconds
+(7) WhatsApp - Brave time: 19.20239019393921 seconds
+Time spent on '(7) WhatsApp': 19.20 seconds
+Total time: 46.531657695770264 seconds
 
-manager.py - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
-Time spent on 'manager.py': 0.00 seconds
-Total time: 12.050506114959717 seconds
+log.txt - CLI-Tracker-Tool - Visual Studio Code time: 40.41670227050781 seconds
+Time spent on 'log.txt': 40.42 seconds
+Total time: 86.94835996627808 seconds
 
-log.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
-Time spent on 'log.txt': 0.00 seconds
-Total time: 22.11208963394165 seconds
+K/DA - POP/STARS time: 25.203362941741943 seconds
+Time spent on 'K/DA': 25.20 seconds
+Total time: 112.15172290802002 seconds
 
-requirements.txt - CLI-Tracker-Tool - Visual Studio Code time: 0 seconds
-Time spent on 'requirements.txt': 0.00 seconds
-Total time: 32.15813207626343 seconds
+log.txt - CLI-Tracker-Tool - Visual Studio Code time: 15.157342910766602 seconds
+Time spent on 'log.txt': 15.16 seconds
+Total time: 127.30906581878662 seconds
 
-ChatGPT - Brave time: 0 seconds
-Time spent on 'ChatGPT': 0.00 seconds
-Total time: 37.1826376914978 seconds
+Total time spent per application:
+my_app.py - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+storage-format.json - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+storage-format.json - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+storage-format.json - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+my_app.py - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+my_app.py - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+Total time spent per application:
+my_app.py - CLI-Tracker-Tool - Visual Studio Code: 0.00 seconds
+storage-format.json - CLI-Tracker-Tool - Visual Studio Code time: 11.11075735092163 seconds
+Time spent on 'storage-format.json': 11.11 seconds
+Total time: 11.11075735092163 seconds
+
+Spotify time: 11.11293625831604 seconds
+Time spent on 'Spotify': 11.11 seconds
+Total time: 22.22369360923767 seconds
 
