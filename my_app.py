@@ -107,7 +107,7 @@ def stop_tracking():
     running = False
 
 # Ensure the service runs continuously in the background
-if __name__ == "__main__":
+def run_tracker():7
     start_tracking()
 
     while running:
